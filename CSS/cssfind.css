@@ -1,0 +1,41 @@
+          
+                *{
+                     font-family: 'Rubik', sans-serif;
+                }
+                
+                header{
+                    font-family: 'Rubik', sans-serif;
+                    width:100%;
+                    height:6%;
+                }
+              
+                main{
+                 margin: 0 auto;
+                    height:90%;
+                    float:left;
+                width: 98%;
+                
+                }
+            
+                    #address2{
+                        width:60%;
+                        
+                        
+                    }
+           
+
+                
+                h2{
+                 font-size:10px; 
+       
+
+                }
+                
+                #clear{
+                    clear:both;
+                }
+                
+                #nav{
+                    position:relative;
+                    
+                }

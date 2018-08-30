@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+	        <!--load css-->
+	        <link rel="stylesheet" type="text/css" href="../styles/main_styles.css">
+	        <link rel="stylesheet" type="text/css" href="../css/student_register_css.css">
+	        <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+	        
+	        <!--load jquery before js-->
+	       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	       <script src='https://cdn.rawgit.com/admsev/jquery-play-sound/master/jquery.playSound.js'></script>
+
+            <!--load js-->
+             <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <script src="https://chence.mtacloud.co.il/js/jsshelter.js"></script>
+            <script src="https://chence.mtacloud.co.il/js/menu.js"></script>
+        	<script language="JavaScript" type="text/javascript"></script>
+
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArcdtxZOTzC0dK3Q9467iDtUC1cv7NtH4&libraries=places&callback=initAutocomplete" async defer></script>
+            
+ 
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<meta name="keywords" content="Google Maps - address to location" lang="he" />
+		<meta name="description" content="" />
+		<meta charset="UTF-8">
+		<title>רישום תלמיד</title>
+        <!--hide div coardnitions onload-->
+        
+    </head>
+    
+    <body >
+        
+	<!-- Header -->
+
+	<header class="header">
+		
+		<!-- Header Content -->
+		<div class="header_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+							<div class="logo_container mr-auto">
+								<a href="#"><div class="logo_text">LearnMatch</div></a>
+							</div>
+							<nav class="main_nav_contaner">
+								<ul class="main_nav">
+									<li class="active"><a href="../Dor/index.html">עמוד הבית</a></li>
+									<li><a href="#">מצא מורה פרטי</a></li>
+									<li><a href="#">הפרופיל שלי</a></li>
+									<li><a href="includes/files.html">שיתוף ידע</a></li>
+									<li><a href="#"></a></li>
+								</ul>
+							</nav>
+							<div class="header_content_right ml-auto text-right">
+								<div class="header_search">
+									<div class="search_form_container">
+										<form action="#" id="search_form" class="search_form trans_400">
+											<input type="search" class="header_search_input trans_400" placeholder="Type for Search" required="required">
+											<div class="search_button">
+												<i class="fa fa-search" aria-hidden="true"></i>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<!-- Hamburger -->
+
+								<div class="user"><a href="#myModal" class="trigger-btn" data-toggle="modal"><i class="fa fa-user" aria-hidden="true"></i></a></div>
+								<div class="hamburger menu_mm">
+									<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+        <main>
+         		<h2>טופס רישום תלמידים</h2>
+         		<hr>
+    
+            <section class = "section_form">
+                
+    		<form action = "insert_user.php" method = "post">
+    			<meta charset="UTF-8">
+    		    
+    			<table class="table table-hover">
+                	<tr>
+                   		<td><label for = "email">כתובת אימייל</label></td>
+    			   	    <td><input class="textinput" type="email" name = "email" id="email" required></input>*</td>
+                	</tr>
+                	<tr>
+                   		<td> <label for = "password">סיסמה</label></td>
+    			   	    <td><input class="textinput" type="password" name = "password" id="password" required></input>*</td>
+                	</tr>
+                	<tr>
+    			        <td> <label for = "firstName">שם פרטי</label></td>
+    			        <td><input class="textinput" type="text" name="firstName" id="firstName" required></input>*</td>
+    			        <tr><td><label for="lastName">שם משפחה</label></td>
+    			        <td><input class="textinput" type="text" name="lastName" id="lastName" required></input>*</td></tr>
+    			</tr>   
+    		
+    			<tr>
+    			    <td> <label  for = "dateOfBirth">תאריך לידה</label></td>
+    			    <td><input type="date" name = "dateOfBirth" id="dateOfBirth" required></input>*</td>
+    			</tr>
+    		    	
+    		    	<tr>
+    		    		<div id="locationField">
+    		        		<td><label for = "autocomplete">כתובת</label> </td>
+		    		        <td><input class="textinput" name = "address" id="autocomplete" placeholder="הכנס כתובת "
+		    				type="text" onchange="firstfunction()" required>*</input></td>
+    		    	</tr>
+    			</div>
+    
+            	<tr>
+                		<td>
+			        	    <div class="btn-group" data-toggle="buttons-radio">
+	                            <label>מין</label>
+                            </div>
+    			        </td>
+    			    <td>
+    			            <label><input type="radio" class="btn_btn-group" id="female" name="gender" value="female" required> נקבה&emsp;&emsp;</label> 
+    			            <label ><input type="radio" class="btn_btn-group" id="male" name="gender" value="male"> זכר</label>
+			        </td>
+                </tr>
+      
+    			</table>
+    			        <input type ="reset" class="btnForm" id="a" value = "אפס טופס">
+    			        <input type="submit" class="btnForm" id="b" name = "submit" value="שמור">
+		        </form>
+            </section>
+        
+        </main>
+  
+    
+    <footer class="footer">
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="copyright_content d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
+							<div class="cr"> Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Dor Menachem, Chen Cohen & Iris Spivak</div>
+							<div class="cr_right ml-md-auto">
+								<div class="footer_social">
+									<span class="cr_social_title">follow us</span>
+									<ul>
+										<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+  </body>
+
+</html>

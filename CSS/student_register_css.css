@@ -1,0 +1,88 @@
+*{
+    font-family: 'Rubik', sans-serif;
+}
+		
+main{
+    direction: rtl;
+}
+
+body{
+    background-image: url(../Dor/images/index_background.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.section_form{
+    text-align:center;
+    width:40%;
+    margin: 0 auto;
+    margin-top:50px;
+    padding-top:-10px;
+    border: 1px solid lightBlue;
+    background-color:white;
+}
+
+.textinput {
+  display: inline-block;
+  float: right;
+}
+
+#dateOfBirth{
+  display: inline-block;
+  float: right;
+  width:200px;
+}
+
+
+form{
+    padding:15px;
+    display: inline-block;
+}
+
+form tr td{
+    width:55%;
+}
+
+h2{
+    position:relative;
+    padding-top:100px;
+    text-align: center;
+}
+
+#autocomplete {
+	border:1px solid #00B1DB;
+	
+}
+
+.table td{
+    padding: .75rem;
+    vertical-align: top;
+    border-bottom: 1px solid #e9ecef;
+    border-top: 0px white;
+    
+}
+
+.btnForm{
+    width:100px;
+    border-radius:4px;
+    margin:5px;
+}
+
+#a{
+    margin-right:50px;
+    float:right;
+    background-color:lightblue;
+    border-color:lightblue;
+}
+
+#b{
+    float:left;
+    margin-left:40px;
+    background-color:lightgreen;
+    border-color:lightgreen;
+}
+
+
+footer{
+    margin-top:100px;
+}

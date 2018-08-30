@@ -1,0 +1,49 @@
+aside {
+    float:right;
+    color:blue;
+    background-color: lightblue;
+    width: 15%;
+    
+}
+
+main{
+    margin-top: 150px;
+}
+
+
+aside label{
+    padding-right:20px;
+    font-weight:bold;
+}
+
+aside h3{
+    padding-right:10px;
+}
+
+
+.sec {
+    width:auto;
+    height:30%;
+    margin-right: 10px;
+    margin:0 auto;
+    width:60%;
+    
+}
+
+.sec h5{
+    text-align:center;
+    
+}
+
+.to_border{
+    border:groove 2px;
+    border-radius:20px;
+    height: 100px;
+    margin-bottom:15px;
+}
+
+.sec .to_border label{
+    padding-top:5px;
+    
+    
+}

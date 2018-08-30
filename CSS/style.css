@@ -1,0 +1,64 @@
+
+ body{
+  background-repeat: repeat;
+font-family: 'Rubik', sans-serif;
+
+ }
+ * {
+font-family: 'Rubik', sans-serif;
+	}
+ 
+ 
+ #open{
+ font-size:25px;
+ cursor:pointer;
+ position:fixed;
+ color:#7dc8dd;
+
+
+    border: none;
+ }
+.sidenav {
+
+    height: 100%;
+    width: 0;
+    position: fixed;
+	z-index: 1;
+    background-color: #7dc8dd;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 0px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    left: 0px;
+    font-size: 36px;
+}
+
+ #logo{
+
+      top:3px;
+      z-index: 4;
+      position:absolute;
+      left:0;
+      }
+
+
+         #nav{
+                    position:relative;
+                    
+                }
+
+

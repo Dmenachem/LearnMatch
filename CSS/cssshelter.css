@@ -1,0 +1,77 @@
+		
+                *{
+                     font-family: 'Rubik', sans-serif;
+                }
+		
+			#autocomplete {
+			    border:1px solid #00B1DB;
+                text-align:right;
+			    width: 95%;
+			}
+			#lat,#lng,#name,#contact,#phone{
+			width: 75%;
+			border:1px solid #00B1DB;
+			text-align:right;
+
+			}
+			#locationField {
+			height: 20px;
+			margin-bottom: 2px;
+			}
+			body{
+			 direction: rtl;
+			font-style: normal;
+             background-image: url("..//css/bg.png");
+             background-repeat: repeat;
+             height:100%;
+             width:100%;
+
+
+			}
+           main{
+            height:94%;
+
+                    }
+                    header{
+                        height:6%;
+                        width:100%;  
+                    }
+         
+            #b{
+                margin:0 auto;    
+                width:35%;
+                background-color: #407183;
+                border:1px solid black;
+                color: white;
+                font-size: 16px;
+                border-radius: 10px;
+            }
+            #clear{
+                clear:both;
+            }
+            #coard{
+                display:none;
+            }
+            #table2{
+            display:none;
+            }
+            #rishum{
+                margin:0 auto;    
+                width:35%;
+                background-color: #407183;
+                border:1px solid black;
+                color: white;
+                font-size: 16px;
+              
+                border-radius: 10px;
+            }
+            .about{
+                display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+
+            }
+            #aboutus{
+                text-align:center;
+            }
+            
