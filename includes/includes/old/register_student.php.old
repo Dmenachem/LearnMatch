@@ -1,0 +1,71 @@
+<?php 
+    $page = 'index'; include 'Header.php';
+?>
+
+	<div class="regular rtl">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="regular_content">
+						<br><div class="regular_title">רישום תלמיד</div><br><br>
+		<div class="col-lg-12 col-xs-6">
+            <section class = "">
+    		<form action = "insert_user.php" method = "post">
+    			<meta charset="UTF-8">
+    		    
+    			<table class="table table-hover">
+                	<tr>
+                   		<td><label for = "email">כתובת אימייל</label></td>
+    			   	    <td><input class="textinput" type="email" name = "email" id="email" required></input>*</td>
+                	</tr>
+                	<tr>
+                   		<td> <label for = "password">סיסמה</label></td>
+    			   	    <td><input class="textinput" type="password" name = "password" id="password" required></input>*</td>
+                	</tr>
+                	<tr>
+    			        <td> <label for = "firstName">שם פרטי</label></td>
+    			        <td><input class="textinput" type="text" name="firstName" id="firstName" required></input>*</td>
+    			        <tr><td><label for="lastName">שם משפחה</label></td>
+    			        <td><input class="textinput" type="text" name="lastName" id="lastName" required></input>*</td></tr>
+    			</tr>   
+    		
+    			<tr>
+    			    <td> <label  for = "dateOfBirth">תאריך לידה</label></td>
+    			    <td><input type="date" name = "dateOfBirth" id="dateOfBirth" required></input>*</td>
+    			</tr>
+    		    	
+    		    	<tr>
+    		    		<div id="locationField">
+    		        		<td><label for = "autocomplete">כתובת</label> </td>
+		    		        <td><input class="textinput" name = "address" id="autocomplete" placeholder="עיר מגורים"
+		    				type="text" onchange="firstfunction()" required>*</input></td>
+    		    	</tr>
+    			</div>
+    
+            	<tr>
+                		<td>
+			        	    <div class="btn-group" data-toggle="buttons-radio">
+	                            <label>מין</label>
+                            </div>
+    			        </td>
+    			    <td>
+    			            <label><input type="radio" class="btn_btn-group" id="female" name="gender" value="female" required> נקבה&emsp;&emsp;</label> 
+    			            <label ><input type="radio" class="btn_btn-group" id="male" name="gender" value="male"> זכר</label>
+			        </td>
+                </tr>
+      
+    			</table>
+    			        <input type="submit" class="btn btn-primary" id="b" name = "submit" value="שמור">
+                        <input type ="reset" class="btn btn-primary" id="a" value = "אפס טופס">
+		        </form>
+            </section>
+            </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+        
+<?php 
+    include 'Footer.php';
+?>
